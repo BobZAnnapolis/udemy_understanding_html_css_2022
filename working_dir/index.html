@@ -6,6 +6,13 @@
     <title>Formatted Resume of Tony Alicea</title>
     <!-- get rid of the favicon.ico developer tools network 404 msg -->
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <!-- use a google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <!-- animations.style site - opensource animations
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">   -->
+    <!-- my styles  -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,6 +30,7 @@
     </nav>
     <main>
         <h1>Resume</h1>
+        <!--    <section class="animate__animated animate__fadeInUp"> -->
         <section>
             <h2>Tony Alicea</h2>
             <p>
@@ -33,9 +41,9 @@
                 <dd><a href="https://www.google.com" target="_ ">google.com</a></dd>
                 <dt>Phone</dt>
                 <dd>555-555-1111</dd>
-                <dt>Twitter</dt>
+                <dt><img src="/images/twitter.svg" class="social_logo" /> Twitter</dt>
                 <dd><a href="https://www.twitter.com/AnthonyPAlicea" target="_ ">@anthonypalicea</dd>
-                <dt>YouTube</dt>
+                <dt><img src="/images/youtube.svg" class="social_logo" /> YouTube</dt>
                 <dd><a href="https://www.youtube.com/tonyalicea" target="_ ">TonyAlicea</a></dd>
                 <dd>@anthonypalicea</dd>
             </dl>
@@ -57,7 +65,7 @@
                 </p>
             </aside>
             <footer>
-                Contact me
+                <a href="#contactme">Contact me</a>
             </footer>
         </article>
 
@@ -112,9 +120,11 @@
         <!-- Needs a picture -->
         <section id="portfolio" class="full-bleed">
             <h2>Portfolio</h2>
-            <img src="https://picsum.photos/id/165/200/300" class="anchor" alt="A field of wheat on a beautiful clear day." />
+            <img src="https://picsum.photos/id/165/200/300" class="anchor"
+                alt="A field of wheat on a beautiful clear day." />
             <img src="https://picsum.photos/id/1045/200" class="anchor2" alt="A cloud covered mountaintop." />
-            <img src="https://picsum.photos/id/107/250" alt="A close up view of several stalk of wheat in a wheat field." />
+            <img src="https://picsum.photos/id/107/250"
+                alt="A close up view of several stalk of wheat in a wheat field." />
             <img src="https://picsum.photos/id/147/300/170" alt="An empty ocean with mild waves." />
             <img src="https://picsum.photos/id/306/150" alt="A flower among rocks." />
             <img src="https://picsum.photos/id/179/175" alt="Waves crashing against boulders and cliffs on a beach." />
@@ -146,7 +156,7 @@
             <h2>Contact Me</h2>
             <form action="dosomething.html" method="POST">
                 <p class="field">
-                    <label for="name" class="label-standard" >Name</label>
+                    <label for="name" class="label-standard">Name</label>
                     <input type="text" id="name" name="name" required />
                 </p>
                 <p class="field">
@@ -164,7 +174,7 @@
                     <label for="comments" class="label-standard">Comments</label>
                     <textarea name="comments" id="comments" rows="3"></textarea>
                 </p>
-                <fieldset class="resume-fieldset" >
+                <fieldset class="resume-fieldset">
                     <legend>Best Contact Time</legend>
                     <p>
                         <label for="contacttime1">Morning</label>
@@ -183,7 +193,7 @@
                         <input type="checkbox" name="sasp" id="asap">
                     </p>
                 </fieldset>
-                <button type="submit">Send</button>
+                <button type="submit" class="button">Send</button>
             </form>
         </section>
 

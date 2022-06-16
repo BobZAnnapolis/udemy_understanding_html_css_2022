@@ -14,11 +14,26 @@ body {
   display: grid;
   margin-inline: 0;
   margin-block: 0;
+  font-family: 'Montserrat', san-serif;
+}
+
+h1, h2 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #3d3d3d; 
+}
+
+h1 {
+  margin-block-end: 0;
+}
+
+h2 {
+  margin-block-end: 0.75rem;
 }
 
 nav {
   position: sticky;
-  /* inset-inline-start: 0;  /* not working in FF, Chrome, Safari use top:0;*/
   top: 0;
   background-color: white;
   display: flex;
@@ -39,19 +54,19 @@ nav ul li {
 }
 
 main {
-  /*max-inline-size: clamp(700px, 50%, 900px);
-  padding-inline: 2rem;
-  border-inline-start: solid 2px black;
-  border-inline-end: solid 2px black;
-  margin-inline: auto;*/
   padding-block: 0;
   margin-block: 0;
   display: grid;
   grid-template-columns: 50px 1fr 50px;
+  row-gap: 10px;
 }
 
 main > * {
   grid-column: 2;
+}
+
+.social_logo {
+  inline-size: 1.25rem;
 }
 
 .full-bleed {
@@ -59,7 +74,7 @@ main > * {
   padding-inline: 2rem;;
 }
 
-.flex-header, .motto {
+.flex-header, .motto, #aboutme footer {
   flex-basis: 100%;
 }
 
@@ -70,14 +85,21 @@ main > * {
   flex-wrap: wrap;
 }
 
-#aboutme aside {
- order: 10;  /* 0 is default */
+#aboutme h2 {
+  color: aliceblue;
 }
 
-.my-picture {
- /* float: inline-start;  works in FireFox, NOT in Chrome ... yet */
- max-inline-size: 75px;
- margin-inline-end: 1rem;
+#aboutme footer {
+  text-align: center;
+}
+
+#aboutme footer a, #aboutme footer a:visited, #aboutme footer a:hover {
+  color: whitesmoke;
+}
+
+#aboutme aside {
+ order: 10;  /* 0 is default */
+ text-align: center;
 }
 
 #portfolio {
@@ -87,7 +109,8 @@ main > * {
                        "portfolio anchor img4 img5 img6";
   grid-gap: 10px;
   align-items: end;
-/*  background-color: bisque; */
+  background-color: rgba(247,77,101,0.35);  /* a -> opacity -> 0-1, lower = more opaque */
+  padding-block: 1rem;
 }
 
 #portfolio h2 {
@@ -100,12 +123,14 @@ main > * {
   max-inline-size: 100%;
 }
 
+#portfolio img:hover {
+  opacity: 0.3;
+  transition: opacity 1s linear;
+}
+
 img.anchor {
   grid-area: anchor;
   align-self: start;
-}
-
-img.anchor2 {
 }
 
 #testimonials {
@@ -127,9 +152,13 @@ img.anchor2 {
   order: -2;
 }
 
-blockquote.featured {
+#testimonials blockquote.featured {
   order: -1;
   flex: 1 0 auto;
+  background-color: black;
+  color: whitesmoke;
+  margin-inline-start: 1rem;
+  font-weight: bold;
 }
 
 .resume-fieldset {
@@ -146,24 +175,41 @@ blockquote.featured {
   padding-block: 0;
 }
 
-
-/*
-** block outer / flow inner / language-dependent
-** .* - starting . -> a class
-** #* - starting # -> an id
-** flex, grid 
-*/
 .label-standard {
   display: block;
-  margin-inline: 0.125rem;
   margin-block: 0.125rem;
+}
+
+.label-standard, .resume-fieldset legend {
+  font-size: .875rem;  
 }
 
 .field {
   margin-block-end: 1.25rem;
 }
 
-/* START: z-index testing : puts Tony Courses at the top on top of NAV UL list
+.button {
+  background-color: black; /* #000000 */
+  color: white;
+  font-family: 'Montserrat', san-serif;
+  padding-inline: 1rem;
+  padding-block: .5rem;
+  border-inline: none;
+  border-block: none;
+}
+
+.button:hover {
+  background-color: rgba(247,77,101,0.35);  /* a -> opacity -> 0-1, lower = more opaque */
+  transition: background-color .5s;
+}
+
+.my-picture {
+  /* float: inline-start;  works in FireFox, NOT in Chrome ... yet */
+  max-inline-size: 75px;
+  margin-inline-end: 1rem;
+ }
+ 
+ /* START: z-index testing : puts Tony Courses at the top on top of NAV UL list
 nav {
   z-index: 10;
 }
